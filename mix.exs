@@ -5,7 +5,7 @@ defmodule Ghostwheel.MixProject do
     [
       app: :ghostwheel,
       version: "0.1.0",
-      elixir: "~> 1.9",
+      elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -14,8 +14,6 @@ defmodule Ghostwheel.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {Ghostwheel.App, []},
-      applications: [:nadia],
       extra_applications: [:logger]
     ]
   end
@@ -25,9 +23,6 @@ defmodule Ghostwheel.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-      {:nadia, "~> 0.6.0"},
-      {:calendar, "~> 1.0.0"},
-      {:tzdata, "~> 1.0.3"}
     ]
   end
 end
