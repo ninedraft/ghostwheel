@@ -2,7 +2,7 @@ defmodule Ghostwheel.Todoist do
   use HTTPoison.Base
 
   @endpoint "https://api.todoist.com/rest/v1/tasks"
-  @token "16c9f1f9d465bed1bfd6cbf7262b9021308e8763"
+  @token Application.compile_env!(:ghostwheel, :todoist_token)
   @item_fields ["id", "url", "content"]
 
   def today() do
